@@ -1,0 +1,166 @@
+//My Theme Colors
+$blue: #5368df;
+$red: #fa5757;
+$grayishBlue : #9194A1;
+$veryDarkBlue: #252B46;
+
+// White and Gray Colors
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$primary: $blue;
+$secondary: $red;
+$light: $grayishBlue;
+$dark: $veryDarkBlue;
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bgColor {
+    background-color: $primary;
+}
+
+.bgColorDark {
+    background-color: $veryDarkBlue;
+}
+
+.txtColor {
+    color: $grayishBlue;
+}
+
+.btnColor {
+    color: $veryDarkBlue;
+}
+
+.btnColorRed {
+    background-color: $secondary;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
+.b-dotted {
+    border-top: 5px dotted $grayishBlue;
+}
+
+.lttr-sp {
+    letter-spacing: 2px;
+}
+
+.container-full {
+    width: 100%;
+}
+
+.btn1 {
+    color: $white;
+    border: 2px solid $primary;
+
+    &:hover {
+        border: 2px solid $primary;
+        background-color: $white;
+        color: $primary;
+    }
+}
+
+.btn2 {
+    color: $white;
+    background-color: $secondary;
+    border: 2px solid $secondary;
+
+    &:hover {
+        border: 2px solid $secondary;
+        background-color: $white;
+        color: $secondary;
+    }
+}
+
+.btnlink {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 5px solid rgba(#fff, 0);
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.btnlinkClicked {
+    color: $veryDarkBlue;
+    border-bottom: 5px solid $secondary;
+}
+
+.btn-h-red {
+    &:hover {
+        color: $secondary !important;
+    }
+}
+
+.div-transform {
+    transition: all 1000ms ease;
+    transform: scale(0);
+}
+
+.div-transform.active {
+    transform: scale(1);
+}
+
+:root {
+    --imageTab: url(/images/illustration-features-tab-1.svg);
+}
+
+.tab-image {
+    background-image: var(--imageTab);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+// Width Breakpoints
+
+@import "breakpoints";
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-md-100 {
+    
+    @include breakpoint-up(medium) {
+        width: 100% !important;
+    }
+}
+
+.w-md-75 {
+
+    @include breakpoint-up(medium) {
+        width: 75% !important;
+    }
+}
+
+.w-md-25 {
+
+    @include breakpoint-up(medium) {
+        width: 25% !important;
+    }
+}
+
+@import "../app/scss/bootstrap.scss";
