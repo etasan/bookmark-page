@@ -97,7 +97,7 @@ body {
 }
 
 :root {
-  --imageTab: url(/images/illustration-features-tab-1.svg);
+  --imageTab: url(images/illustration-features-tab-1.svg);
 }
 
 .tab-image {
